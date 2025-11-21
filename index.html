@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LO DE ROCKY S.R.L.</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            color: #222;
+            background: #fff;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        /* === HERO === */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1603201667141-5a2d4c673378?q=80&w=1196&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 900px;
+        }
+        .btn {
+            margin-top: 25px;
+            font-size: 22px;
+            padding: 15px 35px;
+            background: #ffffff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #dcdcdc;
+        }
+
+        /* === SECTIONS === */
+        .section {
+            padding: 80px 80px;
+        }
+
+        /* === ABOUT === */
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .about img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        /* === GRID (services, advantages, process) === */
+        .services, .advantages, .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        /* === CONTACT FULL SCREEN === */
+        .contact-full {
+            height: 100vh;
+            background: #111;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 80px;
+            gap: 40px;
+        }
+        .contact-full img {
+            width: 180px;
+            opacity: 0.85;
+        }
+
+        /* === CONTACT FORM === */
+        .contact-form {
+            padding: 80px;
+            background: #f5f5f5;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0 25px;
+            font-size: 20px;
+        }
+        button {
+            font-size: 22px;
+            padding: 15px 40px;
+            cursor: pointer;
+        }
+
+        /* === RESPONSIVE === */
+        @media(max-width: 900px){
+            .about {
+                flex-direction: column;
+            }
+            .about img {
+                width: 100%;
+            }
+
+            .services, .advantages, .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-full {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===================== 1. HERO ===================== -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>LO DE ROCKY S.R.L.</h1>
+        <h2>Gestión administrativa, empresarial y de proyectos con un enfoque estratégico y soluciones adaptadas a cada organización. Acompañamos a las empresas en sus decisiones clave, optimizamos procesos y fortalecemos su estructura operativa.</h2>
+        <a href="#contacto"><button class="btn">Contactos</button></a>
+    </div>
+</section>
+
+<!-- ===================== 2. SOBRE NOSOTROS ===================== -->
+<section class="section" id="sobre">
+    <h2>Nuestra Identidad</h2>
+    <div class="about">
+        <div>
+            <p>En LO DE ROCKY S.R.L. trabajamos para que las empresas logren una organización interna sólida, eficiente y orientada al crecimiento. Analizamos cada proceso con detalle para proponer mejoras que realmente transformen la operación diaria.</p>
+            <p>Nuestras áreas de especialización incluyen gestión administrativa, dirección de proyectos y consultoría estratégica, permitiendo a cada cliente obtener una visión integral de su negocio.</p>
+            <p>Actuamos como un socio funcional que acompaña desde el diagnóstico inicial hasta la implementación de cambios y mejoras.</p>
+            <p>Creemos que las decisiones estratégicas deben basarse en información clara, ordenada y verificable, por lo que ayudamos a construir sistemas que respalden una gestión inteligente.</p>
+        </div>
+        <img src="https://media.istockphoto.com/id/2207541639/photo/young-professional-working-on-laptop-in-modern-office-setting.webp?a=1&b=1&s=612x612&w=0&k=20&c=EC_7jC-JsoyqQhouSSdc_oAqvwu_ncUkzaGt8TtFPBE=" alt="Oficina">
+    </div>
+</section>
+
+<!-- ===================== 3. SERVICIOS ===================== -->
+<section class="section" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+        <div>
+            <h3>Gestión Administrativa Eficiente</h3>
+            <p>Reestructuramos los procesos internos para garantizar orden, control y claridad operativa. Implementamos metodologías modernas y sistemas que facilitan la administración diaria.</p>
+        </div>
+        <div>
+            <h3>Dirección Profesional de Proyectos</h3>
+            <p>Planificamos, coordinamos y ejecutamos proyectos empresariales asegurando cumplimiento, calidad y uso eficiente de los recursos asignados.</p>
+        </div>
+        <div>
+            <h3>Consultoría Estratégica Empresarial</h3>
+            <p>Ofrecemos acompañamiento en decisiones clave, creación de estrategias de crecimiento, mejoras estructurales y análisis de información relevante para el negocio.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== 4. VENTAJAS ===================== -->
+<section class="section" id="ventajas">
+    <h2>Ventajas de Trabajar con Nosotros</h2>
+    <div class="advantages">
+        <div>
+            <h3>Enfoque Personalizado</h3>
+            <p>Cada empresa es única, por eso nuestras soluciones se diseñan de acuerdo a sus procesos, necesidades y objetivos específicos.</p>
+        </div>
+        <div>
+            <h3>Acompañamiento Real</h3>
+            <p>No entregamos informes y desaparecemos: trabajamos junto a tu equipo hasta que las mejoras estén implementadas y funcionando.</p>
+        </div>
+        <div>
+            <h3>Experiencia Multidisciplinaria</h3>
+            <p>Integramos administración, análisis estratégico y gestión de proyectos para brindar una visión completa y funcional del negocio.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== 5. PROCESO ===================== -->
+<section class="section" id="proceso">
+    <h2>Nuestro Proceso de Trabajo</h2>
+    <div class="process-steps">
+        <div>
+            <h3>1. Evaluación y Diagnóstico</h3>
+            <p>Estudiamos el funcionamiento actual de la empresa y detectamos áreas clave de mejora.</p>
+        </div>
+        <div>
+            <h3>2. Estrategia y Plan de Mejora</h3>
+            <p>Diseñamos una hoja de ruta concreta con metas, acciones, tiempos y recursos necesarios.</p>
+        </div>
+        <div>
+            <h3>3. Implementación y Seguimiento</h3>
+            <p>Aplicamos las mejoras, guiamos al equipo y analizamos resultados para garantizar avances sostenibles.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== 6. CONTACTO ===================== -->
+<section class="contact-full" id="contacto">
+    <div>
+        <h2>Contáctanos</h2>
+        <p>Si deseas transformar la gestión de tu empresa, estamos listos para trabajar contigo. Escríbenos para recibir una propuesta adaptada a tus necesidades.</p>
+        <p>Creemos en las relaciones de largo plazo y en acompañar a nuestros clientes para que alcancen sus objetivos con claridad y eficiencia.</p>
+        <p><strong>Email:</strong> info@loderocky.biz<br>
+           <strong>Dirección:</strong> Dumont Santos 2719 Piso , Dpto:B Ciudad de Buenos Aires, 1426</p>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
+</section>
+
+<!-- ===================== 7. FORMULARIO ===================== -->
+<section class="contact-form">
+    <h2>Formulario de Contacto</h2>
+    <p>Completa los datos y nuestro equipo se comunicará contigo a la brevedad.</p>
+
+    <form>
+        <label>Nombre Completo</label>
+        <input type="text" placeholder="Ingresa tu nombre">
+
+        <label>Email</label>
+        <input type="email" placeholder="Ingresa tu correo electrónico">
+
+        <label>Mensaje</label>
+        <textarea rows="6" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+
+        <button>Enviar Mensaje</button>
+    </form>
+</section>
+
+</body>
+</html>
